@@ -27,7 +27,7 @@ if (isset($_GET['nameOfChild']) AND isset($_GET['gender']) AND isset($_GET['name
 echo "Dear Professor <b>".$nameOfTeacher."</b>,<br/>
 I have the regret to inform you that <b>". $nameOfChild . "</b>
 will not be able to attend today's class. Unfortunately, ". $pronoun . " is not currently in the right 
-condition to attend school because ". $pronoun ." ". $illness[0];
+condition to attend school because ". $pronoun ." ". $illness[0]. ". Best regards.";
 }
 
 ?>
