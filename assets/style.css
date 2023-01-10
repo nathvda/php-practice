@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +8,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "indie Flower";
+  font-size: 2rem;
   min-height: 100vh;
   min-width: 100vw;
   background-image: linear-gradient(to right top, #fff1f1, #ffc3c3, #ff9494, #f96266, #eb1238);
@@ -41,4 +44,17 @@ body form fieldset {
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
+}
+body p {
+  width: 40rem;
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.3rem;
+  box-shadow: 5px 5px 10px rgba(235, 18, 56, 0.3137254902);
+  border-bottom: 1px solid #eb1238;
+  border-left: 1px solid #eb1238;
+}
+body b {
+  display: inline;
+  color: #eb1238;
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Excuse Generator</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
 <?php
 
 
@@ -80,10 +89,11 @@ if (isset($_GET['nameOfChild']) AND isset($_GET['gender']) AND isset($_GET['name
         $excuse = $other[$number];
     }
 
-echo $today."<br/><br/>Dear Professor <b>".$nameOfTeacher."</b>,<br/><br/>
+echo "<p>" .$today."<br><br>Dear Professor <b>".$nameOfTeacher."</b>,<br><br>
 I have the regret to inform you that <b>". $nameOfChild . "</b>
 will not be able to attend today's class. Unfortunately, ". $pronoun . " is not currently in the right 
-condition to attend school because ". $excuse. ". Best regards.";
+condition to attend school because ". $excuse. ".<br/> Best regards.</p>";
 }
 
-?>
+?></body>
+<html>
