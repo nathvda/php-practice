@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Excuse Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form method="get" action="excuses.php">
+        <label for="nameOfChild">Name of your child</label>
+        <input type="text" name="nameOfChild" id="nameOfChild" required>
+        <label for="gender">Gender of your child:</label>
+        <fieldset><label for="male">M</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="female">F</label>
+        <input type="radio" name="gender" id="female" value="female"></fieldset>
+        <label for="nameOfTeacher">Name of the teacher</label>
+        <input type="text" name="nameOfTeacher" id="nameOfTeacher" required>
+        <label for="reasonType">Type of the reason:</label>
+        <fieldset>
+        <label for="illness">illness</label>
+        <input type="radio" name="reasonType" id="illness" value="illness" required>
+        <label for="death">death</label>
+        <input type="radio" name="reasonType" id="death" value="death">
+        <label for="activity">activity</label>
+        <input type="radio" name="reasonType" id="activity" value="activity">
+        <label for="other">other</label>
+        <input type="radio" name="reasonType" id="other" value="other">
+        </fieldset>
+        <input type="submit" value="Give me an excuse">
+    </form>
+
+   
+</body>
+</html>
