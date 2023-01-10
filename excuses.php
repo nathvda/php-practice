@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <?php
 
+
+
 if (isset($_GET['nameOfChild']) AND isset($_GET['gender']) AND isset($_GET['nameOfTeacher']) AND isset($_GET['reasonType'])){
+
+    $today = date("l jS \of F Y");
+
 
     $nameOfChild = $_GET['nameOfChild'];
     $gender = $_GET['gender'];
@@ -75,7 +80,7 @@ if (isset($_GET['nameOfChild']) AND isset($_GET['gender']) AND isset($_GET['name
         $excuse = $other[$number];
     }
 
-echo "Dear Professor <b>".$nameOfTeacher."</b>,<br/>
+echo $today."<br/><br/>Dear Professor <b>".$nameOfTeacher."</b>,<br/><br/>
 I have the regret to inform you that <b>". $nameOfChild . "</b>
 will not be able to attend today's class. Unfortunately, ". $pronoun . " is not currently in the right 
 condition to attend school because ". $excuse. ". Best regards.";
