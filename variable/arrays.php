@@ -83,5 +83,64 @@ echo '<pre>';
 print_r($me);
 echo '</pre>';
 
+
+$soulmate = [
+    'firstname' => 'Soulmate',
+    'lastname' => 'SoulmateName',
+    'age' => 28,
+    'soccer' => false,
+    'favorite_season' => "winter",
+    'favorite_movies' => $favorite_movies,
+    ];
+    
+    $soulmate['hobbies'] = ['eating', 'cooking', 'flying', 'travelling', 'kpop', 'dancing'];
+   
+echo '<pre>';
+print_r($soulmate);
+echo '</pre>';
+
+$result = array_intersect($me['hobbies'], $soulmate['hobbies']);
+$result2 = array_unique(array_merge($me['hobbies'], $soulmate['hobbies']));
+
+echo '<pre>';
+print_r($result);
+print_r($result2);
+echo '</pre>';
+
+
+$web_development = ['frontend' => [], 'backend' => []];
+var_dump($web_development);
+echo "<br>";
+
+$web_development['frontend'][] = 'xhtml';
+var_dump($web_development);
+echo "<br>";
+
+$web_development['backend'][] = 'Ruby on Rails';
+var_dump($web_development);
+echo "<br>";
+
+$web_development['frontend'][] = 'CSS';
+var_dump($web_development);
+echo "<br>";
+
+$web_development['frontend'][] = 'Flash';
+var_dump($web_development);
+echo "<br>";
+
+$web_development['frontend'][] = 'Javascript';
+var_dump($web_development);
+echo "<br>";
+
+$web_development['frontend'][0] = "html";
+var_dump($web_development);
+echo "<br>";
+
+unset($web_development['frontend'][2]);
+var_dump($web_development);
+echo "<br>";
+
+
+
 ?>
 
