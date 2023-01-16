@@ -227,26 +227,26 @@ session_destroy();
 ?>
 
 <form  method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-    <label for="">Name</label>
-    <input type="text" id="" name="name" value="<?php echo $name;?>">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" value="<?php echo $name;?>">
     <?php echo $nameErr;?>
-    <label for="">Firstname</label>
-    <input type="text" id="" name="firstname" value="<?php echo $firstname?>">
+    <label for="firstname">Firstname</label>
+    <input type="text" id="firstname" name="firstname" value="<?php echo $firstname?>">
     <?php echo $firstnameErr;?>
-    <label for="">Password</label>
-    <input type="password" id="" name="password" value="<?php echo $password;?>">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" value="<?php echo $password;?>">
     <?php echo $passwordErr;?>
-    <label for="">Confirm password</label>
-    <input type="password" class="<?php echo $checkError;?>" id="" name="confirmpassword" value="<?php echo $confirmpassword;?>">
+    <label for="confirmpassword">Confirm password</label>
+    <input type="password" class="<?php echo $checkError;?>" id="confirmpassword" name="confirmpassword" value="<?php echo $confirmpassword;?>">
     <?php echo $confirmpasswordErr;?>
-    <label for="">Phone Number</label>
+    <label for="phone">Phone Number</label>
     <input type="text" id="" name="phone" value="<?php echo $phone;?>">
     <?php echo $phoneErr;?>
-    <label for="">E-mail</label>
-    <input type="mail" id="" name="email" value="<?php echo $email;?>">
+    <label for="email">E-mail</label>
+    <input type="mail" id="email" name="email" value="<?php echo $email;?>">
     <?php echo $emailErr;?>
-    <label for="">Your rating</label>
-    <input type="number" min="0" max="5" id="" name="rating" value="<?php echo $rating;?>">
+    <label for="rating">Your rating</label>
+    <input type="number" min="0" max="5" id="rating" name="rating" value="<?php echo $rating;?>">
     <?php echo $ratingErr;?>
     <input type="submit" value="validate">
    </form>
