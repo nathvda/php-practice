@@ -28,6 +28,6 @@ These informations will be used when creating the connection to the database for
 
 2023-01-13 : 
 - Adding search form.
-- First Sanitizing and validation.
+- First sanitization and validation.
 
 
