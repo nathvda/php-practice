@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Oswald;
+    src: url("../font/oswald.ttf");
+}
+
+*{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:linear-gradient(45deg, black, #202020);
+    min-height:100vh;
+    min-width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+    .results{
+        position:absolute;  
+        display:flex;
+        flex-direction:column;
+        width:40vw;
+        padding:1em;
+        background-image:linear-gradient(45deg, #9b9b9b27, #efefef10);
+        border-radius:1em;
+        border:.1em solid #efefef10;
+        box-shadow:#191919 0 0 2em;
+        right:1em;
+        top:1em;
+        color:#efefef;
+        align-items:center;
+        justify-content:center;
+        color:rgb(212, 212, 212);
+
+        table{
+            width:90%;
+        }
+
+        thead{
+            background-color:teal;
+        }
+
+        .line{
+        background-color:rgba(156, 156, 156, 0.158);
+        font-family:arial;
+        font-size:0.8em;
+
+        td{
+            padding:0.5em;
+            border:1px solid #202020;
+        }
+        }
+
+    }
+}
+
+
+
+form{
+    display:flex;
+    flex-direction:column;
+    width:80vw;
+    padding:1em;
+    background-image:linear-gradient(45deg, #9b9b9b27, #efefef10);
+    border-radius:1em;
+    border:.1em solid #efefef10;
+    box-shadow:#191919 0 0 2em;
+
+    label{
+        font-family:oswald;
+        color:#54d7dbc5;
+        text-transform:uppercase;
+        padding:1em 1em;
+        letter-spacing:0.1em;
+    }
+    input, textarea{
+        background-color:#202020;
+        padding:1em;
+        border:.1em #284041a9 solid;
+        border-radius:0.4em;
+        color:white;
+        &:focus-visible{
+            outline:teal 2px solid;
+            box-shadow:inset #7dc9d320 0 0 5em;
+        }
+
+        &[value="validate"],  &[value="search"]{
+            
+            background-color:#54d7db69;
+            background-image:linear-gradient(45deg, rgb(16, 94, 94), #efefef20);
+            color:#202020;
+            font-weight:bold;
+            text-transform:uppercase;
+            letter-spacing: 0.2em;
+            font-family:oswald;
+            font-size:1.1rem;
+            margin-top:1em;
+            border:0;
+
+        }
+
+       
+    }
+
+    .error{
+        color:rgb(224, 197, 107);
+        font-family:arial;
+        font-size:0.8em;
+        padding:0.3em;
+    }
+
+    .notconfirmed{
+        box-shadow:rgba(54, 198, 223, 0.425) inset 0 0 1em;
+
+    }
+
+   
+
+}
