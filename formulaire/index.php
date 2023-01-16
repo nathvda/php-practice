@@ -4,21 +4,15 @@
 <body>
 
 <?php 
-require __DIR__ . '../vendor/autoload.php';
 
-// Dotenv\Dotenv::createImmutable(__DIR__ . '/../')->load();
+require __DIR__ . '/../vendor/autoload.php';
 
-print_r(__DIR__);
+Dotenv\Dotenv::createImmutable(__DIR__ . '/')->load();
 
-echo getenv('HOST');
-echo $_ENV('HOST');
-echo $_ENV('USER');
-echo $_ENV('DBNAME');
-
-$server = "localhost";
-$username = "root";
-$dbpassword = "";
-$dbname = "test";
+$server = $_ENV['HOST'];
+$username = $_ENV['USER'];
+$dbpassword = $_ENV['PASSWORD'];
+$dbname = $_ENV['DBNAME'];
 
 $conn = new PDO("mysql:host=" . $server . ";dbname=" . $dbname, $username, $dbpassword);
 
@@ -26,6 +20,8 @@ if (isset($_POST['search'])){
 
 $searched = $_POST['search'];
 
+} else {
+    $searched = "";
 }
 
 $sql = 'SELECT * FROM formtrial WHERE firstName="'.$searched.'"';
@@ -208,11 +204,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     
     if (count($errors) == 0){
 
-$server = "localhost";
-$username = "root";
-$dbpassword = "";
-$dbname = "test";
-
+        $server = $_ENV['HOST'];
+        $username = $_ENV['USER'];
+        $dbpassword = $_ENV['PASSWORD'];
+        $dbname = $_ENV['DBNAME'];
+        
 $conn = new PDO("mysql:host=" . $server . ";dbname=" . $dbname, $username, $dbpassword);
 
 $sql = "INSERT INTO formtrial(lastName, firstName, mdp) VALUES ('".$name."', '".$firstname."', '".$password."')";
